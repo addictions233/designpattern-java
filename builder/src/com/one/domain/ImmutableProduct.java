@@ -73,8 +73,8 @@ public class ImmutableProduct {
             return this; // 为了实现链式编程
         }
 
-        public Product build() {
-            return new Product(productName, companyName, part1, part2, part3, part4);
+        public ImmutableProduct build() {
+            return new ImmutableProduct(productName, companyName, part1, part2, part3, part4);
         }
     }
 

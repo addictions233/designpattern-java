@@ -11,7 +11,7 @@ import com.one.domain.Product;
  */
 public class ImmutableBuilderTest {
     public static void main(String[] args) {
-        Product product = new ImmutableProduct.Builder()
+        ImmutableProduct product = new ImmutableProduct.Builder()
                 .buildProductName("手机")
                 .buildCompanyName("华为")
                 .buildPart1("屏幕")
