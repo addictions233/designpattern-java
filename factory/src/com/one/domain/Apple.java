@@ -1,6 +1,7 @@
-package com.one.simplefactory;
+package com.one.domain;
 
 /**
+ * @author one
  *  定义一个苹果类
  */
 public class Apple implements Fruit {
