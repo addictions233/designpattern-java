@@ -1,6 +1,6 @@
 package com.one.test;
 
-import com.one.singleton.Singleton3;
+import com.one.singleton.DoubleCheckSingleton;
 
 /**
  * @ClassName: Main
@@ -10,8 +10,8 @@ import com.one.singleton.Singleton3;
  */
 public class Main {
     public static void main(String[] args) {
-        Singleton3 instance1 = Singleton3.getInstance();
-        Singleton3 instance2 = Singleton3.getInstance();
+        DoubleCheckSingleton instance1 = DoubleCheckSingleton.getInstance();
+        DoubleCheckSingleton instance2 = DoubleCheckSingleton.getInstance();
         System.out.println(instance1 == instance2);
     }
 }

@@ -16,22 +16,23 @@ package com.one.singleton;
  *   1,饿汉模式
  *   这种模式在类加载时就在静态成员变量中创建了本类对象,所以类启动加载比较慢,但是获取对象速度较快,
  */
-public class Singleton {
+public class HungrySingleton {
     /**
-     * 第一步:定义一个私有静态成员变量: 本类对象
+     * 第一步:定义一个私有静态成员变量: 本类对象, 在同一返回结果时也会用到这种使用方式,
+     * 用final修饰,防止该对象被反射修改了
      */
-    private static Singleton singleton = new Singleton();
+    private static final HungrySingleton HUNGRY_SINGLETON = new HungrySingleton();
 
     /**
      * 第一步:私有构造方法,防止其它类创建本类对象
      */
-    private Singleton(){};
+    private HungrySingleton(){};
 
     /**
      * 第二步:提供获取该类对象实例的静态方法
      */
-    public static Singleton getInstance(){
-        return singleton;
+    public static HungrySingleton getInstance(){
+        return HUNGRY_SINGLETON;
     }
 }
 
