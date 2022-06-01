@@ -4,7 +4,7 @@ package com.one.singleton;
  *  单例设计模式就是只能创建一个该类对象,
  *      第一步: 将该类的单例对象定义为该类的一个成员变量
  *      第二步: 私有该类的构造方法,防止其它类创建本类对象
- *      第三步: 然后提供一个静态方法获取该类的对象
+ *      第三步: 然后对外提供一个静态方法获取该类的对象
  *      优点:是不会在内存中多次创建该类对象,可以节约内存
  *      缺点:是多个线程共享同一对象数据,造成线程数据不安全,就是将变量定义为成员变量时,多个线程操作同一个对象,某个线程
  *      对成员变量进行了修改,而其他线程又不希望成员变量在使用时被修改,就可以将成员变量定义为方法内的局部变量,每个线程
@@ -24,12 +24,12 @@ public class HungrySingleton {
     private static final HungrySingleton HUNGRY_SINGLETON = new HungrySingleton();
 
     /**
-     * 第一步:私有构造方法,防止其它类创建本类对象
+     * 第二步:私有构造方法,防止其它类创建本类对象
      */
     private HungrySingleton(){};
 
     /**
-     * 第二步:提供获取该类对象实例的静态方法
+     * 第三步:对外提供获取该类对象实例的静态方法
      */
     public static HungrySingleton getInstance(){
         return HUNGRY_SINGLETON;
