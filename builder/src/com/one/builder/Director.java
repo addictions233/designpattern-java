@@ -4,7 +4,7 @@ import com.one.domain.Product;
 
 /**
  * @ClassName: Director
- * @Description: TODO
+ * @Description: 建造者设计模式也是属于创建者设计模式
  * @Author: one
  * @Date: 2022/03/17
  */
