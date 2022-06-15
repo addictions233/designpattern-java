@@ -15,7 +15,7 @@ public class ImmutableProduct {
     private final String part4;
 
     /**
-     * 私有构造器
+     * 私有构造器,防止直接new对象,必须通过建造工厂创建
      * @param productName productName
      * @param companyName companyName
      * @param part1 part1
@@ -33,6 +33,7 @@ public class ImmutableProduct {
     }
 
     /**
+     * ImmutableProduct类的建造工厂,用来建造immutableProduct对象
      * 静态内部类, 静态内部类不依赖外部类对象的存在而存在,不能使用外部类非静态成员
      */
     public static class Builder {
@@ -79,8 +80,8 @@ public class ImmutableProduct {
     }
 
     /**
-     * 只有get方法,没有set方法
-     * @return String
+     * 只有get方法,没有set方法,属性值是不可变的,在建造工厂中就指定死了
+     * @return String 属性值
      */
     public String getProductName() {
         return productName;
