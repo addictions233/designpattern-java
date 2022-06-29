@@ -1,7 +1,7 @@
 package com.one.builder.impl;
 
 import com.one.builder.ProductBuilder;
-import com.one.domain.Product;
+import com.one.entity.Product;
 
 /**
  * @ClassName: SpecialConcreteProductBuilder

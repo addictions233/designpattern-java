@@ -1,4 +1,4 @@
-package com.one.domain;
+package com.one.entity;
 
 /**
  * @ClassName: Product

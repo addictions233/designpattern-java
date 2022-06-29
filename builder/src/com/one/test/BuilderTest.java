@@ -2,7 +2,7 @@ package com.one.test;
 
 import com.one.builder.Director;
 import com.one.builder.impl.SpecialConcreteProductBuilder;
-import com.one.domain.Product;
+import com.one.entity.Product;
 
 /**
  * @ClassName: BuilderTest

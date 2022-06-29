@@ -1,7 +1,7 @@
 package com.one.builder;
 
 
-import com.one.domain.Product;
+import com.one.entity.Product;
 
 /**
  * @ClassName: Director 引导器

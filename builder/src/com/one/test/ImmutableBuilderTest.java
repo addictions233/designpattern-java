@@ -1,6 +1,6 @@
 package com.one.test;
 
-import com.one.domain.ImmutableProduct;
+import com.one.entity.ImmutableProduct;
 
 /**
  * @ClassName: ImmutableBuilderTest

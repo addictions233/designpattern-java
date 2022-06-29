@@ -1,4 +1,4 @@
-package com.one.domain;
+package com.one.entity;
 
 /**
  * @ClassName: ImmutableProduct
@@ -15,7 +15,7 @@ public class ImmutableProduct {
     private final String part4;
 
     /**
-     * 私有构造器,防止直接new对象,必须通过建造工厂创建
+     * 私有构造器,防止直接new对象,必须通过建造工厂build
      * @param productName productName
      * @param companyName companyName
      * @param part1 part1
@@ -33,7 +33,7 @@ public class ImmutableProduct {
     }
 
     /**
-     * ImmutableProduct类的建造工厂,用来建造immutableProduct对象
+     * 用静态内部类作为ImmutableProduct类对象的建造工厂,用来建造immutableProduct对象
      * 静态内部类, 静态内部类不依赖外部类对象的存在而存在,不能使用外部类非静态成员
      */
     public static class Builder {
