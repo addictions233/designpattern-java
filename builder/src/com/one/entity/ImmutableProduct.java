@@ -2,11 +2,14 @@ package com.one.entity;
 
 /**
  * @ClassName: ImmutableProduct
- * @Description: 不可变对象
+ * @Description: 用建造者设计模式来创建不可变对象
  * @Author: one
  * @Date: 2022/03/17
  */
 public class ImmutableProduct {
+    /**
+     * 所有的属性都是final的表示不可变对象
+     */
     private final String productName;
     private final String companyName;
     private final String part1;

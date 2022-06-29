@@ -5,7 +5,7 @@ import com.one.entity.Product;
 
 /**
  * @ClassName: DefaultConcreteProductBuilder
- * @Description: 默认的Product构建对象
+ * @Description: 建造者设计模式适用于创建属性比较多的对象
  * @Author: one
  * @Date: 2022/03/17
  */
