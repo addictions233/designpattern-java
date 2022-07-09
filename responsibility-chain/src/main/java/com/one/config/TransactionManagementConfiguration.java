@@ -10,13 +10,10 @@ import org.springframework.transaction.annotation.TransactionManagementConfigure
 import javax.sql.DataSource;
 
 /**
- * @EnableTransactionManagement 注解用于开启事务
- * 
- * @author itdebug
- * @create 2021-12-19 14:54
- **/
+ * @author one
+ */
 @SpringBootConfiguration
-@EnableTransactionManagement
+@EnableTransactionManagement // 注解用于开启事务
 public class TransactionManagementConfiguration implements TransactionManagementConfigurer {
     
     @Autowired

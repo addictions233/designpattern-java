@@ -10,14 +10,18 @@ import java.util.Map;
  * @Date: 2022/06/16
  */
 public class Leader {
-    private static Map<String, IEmployee> employeeMap = new HashMap<>();
+    /**
+     * 委派模式需要委派者知道所有可以委派的对象,所以需要容器来存储这些对象,
+     * 以便委派者接收到任务时,能够依据不同的委派对象安排任务
+     */
+    private static final Map<String, IEmployee> EMPLOYEE_MAP = new HashMap<>();
 
     static {
-        employeeMap.put("业务代码", new EmployeeA());
-        employeeMap.put("架构代码", new EmployeeB());
+        EMPLOYEE_MAP.put("业务代码", new EmployeeA());
+        EMPLOYEE_MAP.put("架构代码", new EmployeeB());
     }
 
     public void doing(String command) {
-        employeeMap.get(command).doing(command);
+        EMPLOYEE_MAP.get(command).doing(command);
     }
 }

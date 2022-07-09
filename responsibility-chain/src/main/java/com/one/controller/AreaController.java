@@ -14,10 +14,9 @@ import java.util.Map;
 
 /**
  * @author one
- * @create 2021-12-19 15:39
  **/
 @RestController
-@RequestMapping("/superadmin")
+@RequestMapping("/area")
 public class AreaController {
     
     @Autowired
@@ -33,7 +32,7 @@ public class AreaController {
     public Map<String, Object> listArea(){
         Map<String, Object> modelMap = new HashMap<>();
         List<Area> list = areaService.getAreaList();
-        System.out.println("---" +  chainPatternDemo.exec(request,response));
+        System.out.println("---" +  chainPatternDemo.execute(request,response));
         modelMap.put("areaList", list);
         
         return modelMap;

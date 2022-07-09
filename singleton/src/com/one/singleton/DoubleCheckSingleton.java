@@ -9,6 +9,9 @@ package com.one.singleton;
 public class DoubleCheckSingleton {
     /**
      * volatile解决指令重排的问题
+     * 基于JVM初始化对象的过程(1,分配初始化对象的内存空间  2,初始化对象  3设置instance指向步骤1中的内存空间), 有可能在指令重排序后,
+     * JVM的初始化对象的顺序变为了1,3,2 这样在多线程下,当某一线程进入第一次if判断发现单例对象不为空,得到第3步骤返回的一个半实例化的对象
+     * 这样就返回一个空对象
      */
     private volatile static DoubleCheckSingleton doubleCheckSingleton;
 

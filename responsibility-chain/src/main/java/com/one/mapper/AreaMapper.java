@@ -6,7 +6,7 @@ import org.apache.ibatis.annotations.Mapper;
 import java.util.List;
 
 /**
- * @author itdebug
+ * @author one
  * @create 2021-12-19 10:13
  **/
 @Mapper

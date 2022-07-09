@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 import javax.servlet.http.*;
 
 /**
+ * @author one
  *  规则拦截对象
  */
 @Component

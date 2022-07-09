@@ -10,12 +10,13 @@ import java.util.List;
 
 /**
  * @author one
+ * 对责任链对象进行统一配置处理,将过滤器对象排列成链状
  */
 @Component("ChainPatternDemo")
 public class ChainPatternDemo {
 
     /**
-     * 自动注入各个责任链的对象
+     * 自动注入各个责任链的对象,利用springboot的将同种类型的bean对象注入到list集合中
      */
     @Autowired
     private List<AbstractHandler> abstractHandleList;
@@ -27,7 +28,6 @@ public class ChainPatternDemo {
      */
     @PostConstruct
     public void initializeChainFilter() {
-
         for (int i = 0; i < abstractHandleList.size(); i++) {
             if (i == 0) {
                 abstractHandler = abstractHandleList.get(0);
@@ -40,13 +40,13 @@ public class ChainPatternDemo {
     }
 
     /**
-     * 直接调用这个方法使用
+     * 通过这个方法,可以调用所有的责任链中绑定的filterObject
      *
      * @param request 请求对象
      * @param response 响应对象
      * @return HttpServletResponse
      */
-    public HttpServletResponse exec(HttpServletRequest request, HttpServletResponse response) {
+    public HttpServletResponse execute(HttpServletRequest request, HttpServletResponse response) {
         abstractHandler.filter(request, response);
         return response;
     }

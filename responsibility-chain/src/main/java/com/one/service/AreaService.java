@@ -5,9 +5,8 @@ import com.one.domain.Area;
 import java.util.List;
 
 /**
- * @author itdebug
- * @create 2021-12-19 14:58
- **/
+ * @author one
+ */
 public interface AreaService {
 
     /**
