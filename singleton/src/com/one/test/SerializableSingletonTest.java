@@ -16,12 +16,12 @@ public class SerializableSingletonTest {
     public static void main(String[] args) throws IOException, ClassNotFoundException {
         LazyInnerClassSingleton instance = LazyInnerClassSingleton.getInstance();
         // 将单例对象序列化到硬盘上
-        FileOutputStream fos = new FileOutputStream("a.txt");
+        FileOutputStream fos = new FileOutputStream("singleton/a.txt");
         ObjectOutputStream oos = new ObjectOutputStream(fos);
         oos.writeObject(instance);
         oos.close();
 
-        FileInputStream fis = new FileInputStream("a.txt");
+        FileInputStream fis = new FileInputStream("singleton/a.txt");
         ObjectInputStream ois = new ObjectInputStream(fis);
         Object object = ois.readObject();
         ois.close();

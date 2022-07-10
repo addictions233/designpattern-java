@@ -16,9 +16,9 @@ import java.io.ObjectOutputStream;
 public class EnumSingletonTest {
     public static void main(String[] args) throws Exception {
         EnumSingleton instance = EnumSingleton.getInstance();
-        ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("object.txt"));
+        ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("singleton/object.txt"));
         oos.writeObject(instance);
-        ObjectInputStream ois = new ObjectInputStream(new FileInputStream("object.txt"));
+        ObjectInputStream ois = new ObjectInputStream(new FileInputStream("singleton/object.txt"));
         EnumSingleton instance2 = (EnumSingleton)ois.readObject();
         System.out.println(instance);
         System.out.println(instance2);
