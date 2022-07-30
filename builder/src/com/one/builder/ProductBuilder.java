@@ -4,7 +4,7 @@ import com.one.entity.Product;
 
 /**
  * @InterfaceName: ProductBuilder
- * @Description: 用来构建Product对象的建造类
+ * @Description: 用来构建Product对象的建造类的接口规范
  * @Author: one
  * @Date: 2022/03/17
  */
