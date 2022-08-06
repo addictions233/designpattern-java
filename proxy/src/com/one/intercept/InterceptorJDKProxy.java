@@ -11,13 +11,13 @@ import java.lang.reflect.Proxy;
  * @Date: 2020/12/15
  */
 public class InterceptorJDKProxy implements InvocationHandler {
-    /*
-        用来接收传入的目标对象target
+    /**
+     * 用来接收传入的目标对象target
      */
     private Object target;
 
-    /*
-        用来接收传入的拦截器interceptor的全限定类名
+    /**
+     * 用来接收传入的拦截器interceptor的全限定类名
      */
     private String interceptorClass;
 
