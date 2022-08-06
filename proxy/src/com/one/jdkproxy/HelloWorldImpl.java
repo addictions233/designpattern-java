@@ -1,4 +1,4 @@
-package com.one.JDKproxy;
+package com.one.jdkproxy;
 
 public class HelloWorldImpl implements HelloWorld {
 
