@@ -12,8 +12,15 @@ import java.time.Year;
  * @date 2022-8-6
  */
 public class OrderServiceStaticProxy implements IOrderService {
+    /**
+     * 被代理的对象
+     */
     private IOrderService orderService;
 
+    /**
+     * 以构造器的方式注入被代理的对象
+     * @param orderService 被代理对象
+     */
     public OrderServiceStaticProxy(IOrderService orderService) {
         this.orderService = orderService;
     }
