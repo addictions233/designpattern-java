@@ -41,7 +41,7 @@ public class JdkProxyMeiPo implements InvocationHandler {
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         before();
-        // method.invoke(proxy,args) 错误写法
+        // method.invoke(proxy,args) 错误写法, 如果用proxy对象会出现死循环调用方法
         // 利用反射来调用目标对象的方法,这是静态代理和动态代理的区别
         Object invoke = method.invoke(target, args);
         after();

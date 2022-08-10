@@ -7,7 +7,7 @@ package com.one.register;
  * @Date: 2022/05/30
  */
 public class ThreadLocalSingleton {
-    private static ThreadLocal<ThreadLocalSingleton> threadLocal = new ThreadLocal<>() {
+    private static ThreadLocal<ThreadLocalSingleton> threadLocal = new ThreadLocal<ThreadLocalSingleton>() {
         /**
          * 重写initialValue()方法为ThreadLocal容器设置默认初始化值,默认为null
          * 一开始就在容器中设值,所以是懒汉式的
