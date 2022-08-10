@@ -1,4 +1,8 @@
-package com.one.jdkproxy;
+package com.one.jdkproxy.demo;
+
+import com.one.jdkproxy.demo.HelloWorld;
+import com.one.jdkproxy.demo.HelloWorldImpl;
+import com.one.jdkproxy.demo.JDKProxyFactory;
 
 import java.lang.reflect.Method;
 
@@ -15,7 +19,7 @@ public class Main {
 //        HelloWorld proxy =  (HelloWorld)example.getProxyObject(helloWorld);
 //        proxy.sayHelloWorld();
 //
-        HelloWorld proxy =(HelloWorld)JDKProxyFactory.getProxy(helloWorld);
+        HelloWorld proxy =(HelloWorld) JDKProxyFactory.getProxy(helloWorld);
         //用 代理对象调用任何方法,都会进入到 invoke()方法中执行..
         //代理对象调用的方法传参数给 method, 方法中的参数传递给 args
         String string = proxy.toString();

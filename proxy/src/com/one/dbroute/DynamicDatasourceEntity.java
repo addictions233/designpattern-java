@@ -2,7 +2,7 @@ package com.one.dbroute;
 
 /**
  * @author one
- * @description 模拟动态数据源切换
+ * @description 模拟动态数据源切换, 真实的动态数据源切换需要实现abstractRoutingDataSource接口
  * @date 2022-8-6
  */
 public class DynamicDatasourceEntity {

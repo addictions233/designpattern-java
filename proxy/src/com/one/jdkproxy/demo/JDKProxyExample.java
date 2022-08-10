@@ -1,4 +1,4 @@
-package com.one.jdkproxy;
+package com.one.jdkproxy.demo;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
@@ -16,7 +16,9 @@ import java.lang.reflect.Proxy;
  * 对代理实例调用方法时，将对方法调用进行编码并将其指派到它的调用处理程序的 invoke 方法
  */
 public class JDKProxyExample implements InvocationHandler {
-    //接收目标对象
+    /**
+     * 接收目标对象
+     */
     private Object target;
 
     /**
@@ -45,7 +47,7 @@ public class JDKProxyExample implements InvocationHandler {
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         System.out.println("InvocationHandler中的invoke方法调用了....");
 //        Object result = method.invoke(proxy, args);
-        //利用反射动态的来反射方法，这就是动态代理和静态代理的区别
+        // 利用反射动态的来反射方法，这就是动态代理和静态代理的区别
         Object result = method.invoke(target, args);
         System.out.println("真实对象调用的结果:"+result);
         return result;
