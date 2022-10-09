@@ -1,5 +1,8 @@
 package com.one.staticproxy;
 
+/**
+ * 实现静态代理
+ */
 public class Father {
     private Person person;
 

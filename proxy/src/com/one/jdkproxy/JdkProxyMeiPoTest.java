@@ -18,6 +18,8 @@ public class JdkProxyMeiPoTest {
 
         /**
          * 将Person接口生成的代理对象,输出到E盘中
+         * ProxyClassFactory是Proxy里的一个内部类，用来生成代理类，
+         * 调用ProxyGenerator.generateProxyClass()方法来完成生成字节码的操作
          */
         byte[] bytes = ProxyGenerator.generateProxyClass("$Proxy0", new Class[]{Person.class});
         FileOutputStream fileOutputStream = new FileOutputStream("E://$Proxy0.class");

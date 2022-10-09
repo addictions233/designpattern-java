@@ -1,4 +1,6 @@
-package com.one.dbroute;
+package com.one.dbroute.service;
+
+import com.one.dbroute.Order;
 
 public interface IOrderService {
     /**

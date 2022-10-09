@@ -18,7 +18,7 @@ public class PrototypeTest {
         ConcretePrototypeA concretePrototypeA = new ConcretePrototypeA();
         concretePrototypeA.setName("张三");
         concretePrototypeA.setAge(23);
-        concretePrototypeA.setHobbies(new ArrayList<>() {
+        concretePrototypeA.setHobbies(new ArrayList<String>() {
             {
                 add("唱");
                 add("跳");

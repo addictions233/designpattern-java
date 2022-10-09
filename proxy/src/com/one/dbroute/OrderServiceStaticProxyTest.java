@@ -1,6 +1,8 @@
 package com.one.dbroute;
 
 import com.one.dbroute.proxy.OrderServiceStaticProxy;
+import com.one.dbroute.service.IOrderService;
+import com.one.dbroute.service.impl.orderServiceImpl;
 
 /**
  * @author one

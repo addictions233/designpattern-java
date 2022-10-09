@@ -6,7 +6,7 @@ import java.lang.reflect.Proxy;
 
 /**
  * @author one
- * @description TODO
+ * @description 使用jdk的动态代理需要实现InvocationHandler接口, 而生成的代理对象则是继承Proxy类,实现Person接口的代理对象
  * @date 2022-8-10
  */
 public class JdkProxyMeiPo implements InvocationHandler {
@@ -17,7 +17,7 @@ public class JdkProxyMeiPo implements InvocationHandler {
     private Person target;
 
     /**
-     * 调用该方法使用jdk的动态代理生成target对象的代理对象
+     * 调用该方法使用jdk的动态代理: 生成目标对象的代理对象
      *
      * @param person 目标对象
      * @return 获取目标对象的代理对象
@@ -30,20 +30,20 @@ public class JdkProxyMeiPo implements InvocationHandler {
     }
 
     /**
-     * 使用jdk的动态代理必须InvocationHandler接口
+     * 使用jdk的动态代理必须InvocationHandler接口重写invoke方法, invoke方法本质上就是一个环绕通知,对原有的findLove()方法进行增强
      *
-     * @param proxy 生成的代理对象
-     * @param method 切面方法
-     * @param args 方法参数
+     * @param proxy 生成的代理对象 Proxy类的对象,即代理对象
+     * @param method 切面方法  Class.forName("com.one.jdkproxy.Person").getMethod("findLove", new Class[0])
+     * @param args 方法参数  findlove()方法的参数,这里是空参,传null
      * @return 方法调用结果
      * @throws Throwable 异常
      */
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         before();
-        // method.invoke(proxy,args) 错误写法, 如果用proxy对象会出现死循环调用方法
+//        Object invoke =  method.invoke(proxy,args); // 错误写法, 如果用proxy对象会出现死循环调用方法, proxy对象也是有findLove()方法的
         // 利用反射来调用目标对象的方法,这是静态代理和动态代理的区别
-        Object invoke = method.invoke(target, args);
+        Object invoke = method.invoke(this.target, args);
         after();
         return invoke;
     }

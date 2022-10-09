@@ -1,7 +1,7 @@
 package com.one.dbroute.proxy;
 
 import com.one.dbroute.DynamicDatasourceEntity;
-import com.one.dbroute.IOrderService;
+import com.one.dbroute.service.IOrderService;
 import com.one.dbroute.Order;
 
 import java.time.Year;
