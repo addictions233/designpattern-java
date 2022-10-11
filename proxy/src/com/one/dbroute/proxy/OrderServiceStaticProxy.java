@@ -37,9 +37,9 @@ public class OrderServiceStaticProxy implements IOrderService {
         String dbRoute= "db_" + year;
         DynamicDatasourceEntity.set(dbRoute);
         System.out.println("使用了数据源:" + dbRoute);
-        orderService.createOrder(order);
+        int result = orderService.createOrder(order);
         DynamicDatasourceEntity.restore();
-        return 0;
+        return result;
     }
 
 }

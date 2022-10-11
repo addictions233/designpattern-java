@@ -6,7 +6,7 @@ import java.lang.reflect.Proxy;
 
 /**
  * @ClassName: JDKProxyExample
- * @Description: TODO
+ * @Description: 使用实例工厂获取目标对象的动态代理对象
  * @Author: one
  * @Date: 2020/12/14
  */

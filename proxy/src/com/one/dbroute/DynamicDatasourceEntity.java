@@ -6,7 +6,7 @@ package com.one.dbroute;
  * @date 2022-8-6
  */
 public class DynamicDatasourceEntity {
-    private static final String DEFAULT_DATASOURCE= null;
+    private static final String DEFAULT_DATASOURCE= "db_default";
 
     private static ThreadLocal<String> threadLocal = new ThreadLocal<>();
 

@@ -1,7 +1,7 @@
 package com.one.staticproxy;
 
 /**
- * 实现静态代理
+ * 实现静态代理: 静态代理不符合开闭原则
  */
 public class Father {
     private Person person;

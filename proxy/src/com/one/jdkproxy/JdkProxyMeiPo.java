@@ -7,6 +7,12 @@ import java.lang.reflect.Proxy;
 /**
  * @author one
  * @description 使用jdk的动态代理需要实现InvocationHandler接口, 而生成的代理对象则是继承Proxy类,实现Person接口的代理对象
+ *      JDK动态代理的实现原理:
+ *          1, 拿到被代理类的引用对象, 并且获取它的所有接口(反射获取)
+ *          2, JDK Proxy类重写生成一个新的类, 实现了被代理类所有的接口的方法
+ *          3, 动态生成Java代码, 把增强逻辑加入到新生成的代码中
+ *          4, 编译生成新的的java代码的class文件
+ *          5, 加载并重写运行新的动态代理对象
  * @date 2022-8-10
  */
 public class JdkProxyMeiPo implements InvocationHandler {
