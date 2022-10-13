@@ -1,4 +1,4 @@
-package com.one.cglibproxy;
+package com.one.cglibproxy.demo;
 
 public class HelloWorldImpl implements HelloWorld {
 
