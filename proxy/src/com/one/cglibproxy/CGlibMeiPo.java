@@ -27,10 +27,23 @@ public class CGlibMeiPo implements MethodInterceptor {
         return enhancer.create();
     }
 
+    /**
+     * 对目标对象的方法进行增强, 生成的代理对象(目标对象的子类对象)调用findLove()方法时,就是调用的intercept()方法
+     *
+     * @param proxy 代理对象
+     * @param method 目标对象中的方法
+     * @param objects 方法参数
+     * @param methodProxy 代理对象的方法
+     * @return 方法执行结果
+     * @throws Throwable
+     */
     @Override
-    public Object intercept(Object o, Method method, Object[] objects, MethodProxy methodProxy) throws Throwable {
+    public Object intercept(Object proxy, Method method, Object[] objects, MethodProxy methodProxy) throws Throwable {
         before();
-        Object result = methodProxy.invokeSuper(o, objects);
+        // cglib动态代理调用目标对象的方法与jdk动态代理有很大区别, jdk动态代理是直接利用目标对象反射进行调用的
+        // 而cglib动态代理调用目标对象的方法是用的代理对象proxy,调用的代理方法methodProxy,而不是用的目标对象的方法method
+        // 调用invokeSupper()方法其实是调用的FastClass的invoke()方法,而FastClass对象又是动态生成的字节码
+        Object result = methodProxy.invokeSuper(proxy, objects);
         after();
         return result;
     }

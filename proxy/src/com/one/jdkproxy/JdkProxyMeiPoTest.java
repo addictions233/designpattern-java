@@ -22,7 +22,7 @@ public class JdkProxyMeiPoTest {
          * 调用ProxyGenerator.generateProxyClass()方法来完成生成字节码的操作
          */
         byte[] bytes = ProxyGenerator.generateProxyClass("$Proxy0", new Class[]{Person.class});
-        FileOutputStream fileOutputStream = new FileOutputStream("E://$Proxy0.class");
+        FileOutputStream fileOutputStream = new FileOutputStream("E://proxy//$Proxy0.class");
         fileOutputStream.write(bytes);
         fileOutputStream.close();
     }
