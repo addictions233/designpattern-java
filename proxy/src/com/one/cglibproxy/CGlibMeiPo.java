@@ -10,6 +10,10 @@ import java.lang.reflect.Method;
  * @author one
  * @description 使用CGlib实现动态代理需要实现MethodInterceptor接口,使用CGlib实现动态代理不需要实现接口,代理对象
  *              是目标对象的子类对象, 所以代理对象能对父类的方法进行增强重写
+ *           1. 使用JDK Proxy的目标对象必须实现一个接口, 而 CGlib对目标对象没有要求,只要不是final修饰的(无法继承)
+ *           2, CGLIB 生成的代理逻辑复杂,效率低, 而调用效率高, 生成了一个包含了所有的逻辑的FastClass, 不再需要反射调用
+ *              JDK Proxy生成代理的逻辑简单, 但是每次都需要反射调用, 调用效率低
+ *           3, CGlib不能调用final的方法
  * @date 2022-10-14
  */
 public class CGlibMeiPo implements MethodInterceptor {
