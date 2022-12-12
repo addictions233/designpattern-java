@@ -17,6 +17,7 @@ public abstract class NetCourse {
         this.courseVideo();
 
         if (needHomeWork()) {
+            // 3,检查作用
             checkHomeWork();
         }
     }
@@ -27,7 +28,7 @@ public abstract class NetCourse {
     protected abstract void checkHomeWork();
 
     /**
-     * 虽然父类返回了false, 但是可以让子类进行重写, 进行调整
+     * 虽然父类返回了false, 但是可以让子类进行重写, 进行流程调整
      * @return boolean
      */
     protected boolean needHomeWork() {
