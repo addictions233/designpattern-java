@@ -15,8 +15,7 @@ public class Main {
         apple.get();  // 输出: 采集苹果
         Fruit banana = FruitFactory.getFruitInstance("banana");
         banana.get(); // 输出: 采集香蕉
-
-
+        System.out.println("-----------------");
         Fruit apple2 = FruitFactory.getFruitInstance2("com.one.domain.Apple");
         apple2.get();
         Fruit banana2 = FruitFactory.getFruitInstance2("com.one.domain.Banana");

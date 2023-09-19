@@ -1,6 +1,7 @@
 package com.one.factorymethod;
 
 import com.one.domain.Fruit;
+import sun.java2d.pipe.SpanIterator;
 
 /**
  * @ClassName: Test
@@ -10,8 +11,12 @@ import com.one.domain.Fruit;
  */
 public class Main {
     public static void main(String[] args) {
-        FruitFactory fruitFactory = new AppleFactory();
-        Fruit fruit = fruitFactory.create();
-        fruit.get(); // 输出: 采集苹果
+        FruitFactory factory1 = new AppleFactory();
+        Fruit fruit1 = factory1.create();
+        fruit1.get(); // 输出: 采集苹果
+        System.out.println("----------------------");
+        FruitFactory factory2 = new BananaFactory();
+        Fruit fruit2 = factory2.create();
+        fruit2.get();
     }
 }
