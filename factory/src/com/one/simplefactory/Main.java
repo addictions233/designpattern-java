@@ -1,4 +1,4 @@
-package com.one.test;
+package com.one.simplefactory;
 
 import com.one.domain.Fruit;
 import com.one.simplefactory.FruitFactory;
@@ -10,6 +10,7 @@ import com.one.simplefactory.FruitFactory;
  */
 public class Main {
     public static void main(String[] args) throws Exception {
+        // 通过工厂类中的静态方法来创建其它类的对象
         Fruit apple = FruitFactory.getFruitInstance("apple");
         apple.get();  // 输出: 采集苹果
         Fruit banana = FruitFactory.getFruitInstance("banana");
