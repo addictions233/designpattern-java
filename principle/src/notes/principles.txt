@@ -8,7 +8,8 @@ There should never be more than one reason for a class to change
 Software entities like classes,modules and functions should be open for extension but closed for modifications
 理解: 类,模块,函数, 对扩展是开放的,对修改是关闭的.如果要修改代码,尽量用继承或者组合的方式来扩展类的功能,
 而不是直接修改类的原有代码.当然,如果能保证对整个架构不产生任何影响,那就没必要搞的那么复杂,直接修改这个类吧
-总结:对类的功能改动,最好的方式是扩展其功能而不是修改其原有功能
+总结:对类的功能改动,最好的方式是扩展其功能而不是修改其原有功能, 提高软件系统的可复用性和可维护性
+实现: 用抽象来构建框架, 用实现来扩展细节
 
 3,里氏替换原则
 Functions that use pointers or references to base classes must be able to use objects of derived classes without knowing it
@@ -24,6 +25,7 @@ abstractions should not depend upon details, details should depend upon abstract
 而不是面向实现类编程,面向实现类编程相当于就事论事,那是正向依赖;而面向接口编程,相当于透过现象看本质,抓住事物的共性,
 那就是反向依赖,即依赖倒置
 总结: 面向接口编程, 抽取事物的本质和共性来定义接口
+实现: 功能都定义为接口, 面向接口编程, 不要面向实现编程
 
 5,迪米特法则
 Only talk to you immediate friends
