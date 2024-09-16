@@ -3,13 +3,14 @@ There should never be more than one reason for a class to change
 理解: 不同的类具备不同的职责, 各司其职.做系统设计时,如果发现一个类拥有两种职责,那么就要问一个问题:
 可以将这个类分成两个类吗?如果真的有必要,那就分开,千万不要让一个类干的事情太多
 总结: 一个类/接口/方法只承担一个职责
+实现: 将类,接口或者方法按照功能模块进行拆分, 不要为了方便将多个功能模块冗余在一个类,接口或者方法中
 
 2, 开放封闭原则
 Software entities like classes,modules and functions should be open for extension but closed for modifications
 理解: 类,模块,函数, 对扩展是开放的,对修改是关闭的.如果要修改代码,尽量用继承或者组合的方式来扩展类的功能,
 而不是直接修改类的原有代码.当然,如果能保证对整个架构不产生任何影响,那就没必要搞的那么复杂,直接修改这个类吧
 总结:对类的功能改动,最好的方式是扩展其功能而不是修改其原有功能, 提高软件系统的可复用性和可维护性
-实现: 用抽象来构建框架, 用实现来扩展细节
+实现: 用抽象来构建框架, 用实现(继承)来扩展细节
 
 3,里氏替换原则
 Functions that use pointers or references to base classes must be able to use objects of derived classes without knowing it
@@ -32,12 +33,14 @@ Only talk to you immediate friends
 理解: 迪米特法则又叫最少知道法则,一个对象应该对其它对象保持最少的了解,类与类的关系越密切,耦合度越大,为了减少类之间的耦合,
 不要让一个类依赖于太多其他的类,一个类对于自己依赖的类知道的越少越好
 总结: 高内聚,低耦合,只与最直接的朋友通信
+实现: 出现在成员变量, 方法的输入参数和输出结果中的类称为成员朋友类, 而出现在方法体内部的类不属于朋友类
 
 6,接口隔离原则
 The dependency fo one class to another oen should depend on the smallest possible interface
 理解:对于类来说:一个类不应该依赖它不需要的接口,一个类对另一个类的的依赖应该建立在最小的接口上,
 对于接口来说:不要对外暴露没有实际意义的接口,当需要对外暴露接口时,需要保证接口的实用性和间接性
 总结:一个类对另一个类的的依赖应该建立在最小的接口上,不要对外暴露没有实际意义的接口
+实现: 用多个专门的接口,而不要使用单一的,臃肿的总接口
 
 
 7,组合复用原则 Composite Reuse Principle
