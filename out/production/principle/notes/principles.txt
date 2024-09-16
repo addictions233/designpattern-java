@@ -17,7 +17,7 @@ Functions that use pointers or references to base classes must be able to use ob
 理解: 父类可以被子类替换,可以将代码中的父类全部替换为子类,而程序的行为没有发生变化,在使用继承时,遵循里氏替换原则,
 在子类中尽量不要重写和重载父类的方法.但是要注意父类的protected方法,它们往往是希望你重写的
 如果要使用继承关系，则必须严格遵循里氏替换原则
-总结: 所有引用父类的地方都能透明的替换成其子类的对象
+总结: 所有引用父类的地方都能透明的替换成其子类的对象, 在继承中要遵循里氏替换原则
 
 4,依赖倒置原则
 High level modules should not depends upon low level modules, both should depend upon abstractions.

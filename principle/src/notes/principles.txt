@@ -17,7 +17,7 @@ Functions that use pointers or references to base classes must be able to use ob
 理解: 父类可以被子类替换,可以将代码中的父类全部替换为子类,而程序的行为没有发生变化,在使用继承时,遵循里氏替换原则,
 在子类中尽量不要重写和重载父类的方法.但是要注意父类的protected方法,它们往往是希望你重写的
 如果要使用继承关系，则必须严格遵循里氏替换原则
-总结: 所有引用父类的地方都能透明的替换成其子类的对象
+总结: 所有引用父类的地方都能透明的替换成其子类的对象, 在继承中要遵循里氏替换原则
 
 4,依赖倒置原则
 High level modules should not depends upon low level modules, both should depend upon abstractions.
@@ -33,7 +33,7 @@ Only talk to you immediate friends
 理解: 迪米特法则又叫最少知道法则,一个对象应该对其它对象保持最少的了解,类与类的关系越密切,耦合度越大,为了减少类之间的耦合,
 不要让一个类依赖于太多其他的类,一个类对于自己依赖的类知道的越少越好
 总结: 高内聚,低耦合,只与最直接的朋友通信
-实现: 出现在成员变量, 方法的输入参数和输出结果中的类称为成员朋友类, 而出现在方法体内部的类不属于朋友类
+实现: 出现在成员变量, 方法的输入参数和输出结果中的类称为成员朋友类, 而出现在方法体内部的类不属于朋友类,不需要知道
 
 6,接口隔离原则
 The dependency fo one class to another oen should depend on the smallest possible interface
@@ -55,4 +55,4 @@ The dependency fo one class to another oen should depend on the smallest possibl
 2,新旧类之间的耦合度低。这种复用所需的依赖较少，新对象存取成分对象的唯一方法是通过成分对象的接口。
 3,复用的灵活性高。这种复用可以在运行时动态进行，新对象可以动态地引用与成分对象类型相同的对象。
 
-总结: 经理使用组合复用,不用使用继承
+总结: 优先使用组合复用,不用使用继承
