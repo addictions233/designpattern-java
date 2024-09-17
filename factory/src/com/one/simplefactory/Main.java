@@ -10,12 +10,13 @@ import com.one.simplefactory.FruitFactory;
  */
 public class Main {
     public static void main(String[] args) throws Exception {
-        // 通过工厂类中的静态方法来创建其它类的对象
+        // 通过简单工厂来创建其它类的对象
         Fruit apple = FruitFactory.getFruitInstance("apple");
         apple.get();  // 输出: 采集苹果
         Fruit banana = FruitFactory.getFruitInstance("banana");
         banana.get(); // 输出: 采集香蕉
-        System.out.println("-----------------");
+        System.out.println("--------------------------------------------");
+        // 使用静态工厂来创建对象
         Fruit apple2 = FruitFactory.getFruitInstance2("com.one.domain.Apple");
         apple2.get();
         Fruit banana2 = FruitFactory.getFruitInstance2("com.one.domain.Banana");
