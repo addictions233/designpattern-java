@@ -2,8 +2,8 @@ package com.one.abstractfactory;
 
 /**
  * @ClassName: JavaCourseFactory
- * @Description: 具体工厂(实现抽象工厂接口): 抽象工厂用来应对多功能,多维度的对象,
- *               缺点是当ICourseFactory工厂中想要添加新的功能对象,其所有的实现类都得实现该方法
+ * @Description: 抽象工厂接口的具体实现工厂: 抽象工厂用来应对多功能,多维度的对象,
+ *               缺点是当ICourseFactory工厂中想要添加新的功能对象,其所有的实现类都得实现该方法, 不符合开闭原则
  *               任务量太大,不适合频繁添加功能对象
  * @Author: one
  * @Date: 2022/05/26
