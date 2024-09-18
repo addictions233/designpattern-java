@@ -1,4 +1,4 @@
-package com.one.entity;
+package com.one.builder.v2;
 
 /**
  * @ClassName: ImmutableProduct
@@ -36,6 +36,7 @@ public class ImmutableProduct {
     }
 
     /**
+     * 将实体类和实体类的建造类Builder放入在一个类中, 这种方式比较常用
      * 用静态内部类作为ImmutableProduct类对象的建造工厂,用来建造immutableProduct对象
      * 静态内部类, 静态内部类不依赖外部类对象的存在而存在,不能使用外部类非静态成员
      */

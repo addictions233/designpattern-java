@@ -1,6 +1,4 @@
-package com.one.test;
-
-import com.one.entity.ImmutableProduct;
+package com.one.builder.v2;
 
 /**
  * @ClassName: ImmutableBuilderTest

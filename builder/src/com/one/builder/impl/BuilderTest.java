@@ -1,6 +1,7 @@
-package com.one.test;
+package com.one.builder.impl;
 
 import com.one.builder.Director;
+import com.one.builder.impl.DefaultConcreteProductBuilder;
 import com.one.builder.impl.SpecialConcreteProductBuilder;
 import com.one.entity.Product;
 
@@ -23,5 +24,9 @@ public class BuilderTest {
         Director director = new Director(new SpecialConcreteProductBuilder());
         Product product = director.makeProduct("手机", "华为", "屏幕", "摄像头", "芯片", "电池");
         System.out.println(product);
+        System.out.println("----------------------------------------------------------");
+        Director director1 = new Director(new DefaultConcreteProductBuilder());
+        Product product1 = director1.makeProduct("飞机", "空客", "机身", "雷达", "航电", "机翼");
+        System.out.println(product1);
     }
 }
