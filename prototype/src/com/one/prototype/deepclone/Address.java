@@ -9,7 +9,7 @@ import java.util.Objects;
  * @Author: one
  * @Date: 2022/06/07
  */
-public class Address implements Serializable {
+public class Address implements Serializable, Cloneable {
     private String province;
 
     private String city;
@@ -45,6 +45,11 @@ public class Address implements Serializable {
         Address address = (Address) o;
         return Objects.equals(province, address.province) &&
                 Objects.equals(city, address.city);
+    }
+
+    @Override
+    protected Address clone() throws CloneNotSupportedException {
+        return (Address) super.clone();
     }
 
     @Override

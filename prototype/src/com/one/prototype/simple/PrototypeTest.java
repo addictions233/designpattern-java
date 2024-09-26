@@ -1,4 +1,4 @@
-package com.one.prototype.test;
+package com.one.prototype.simple;
 
 import com.one.prototype.simple.ConcretePrototypeA;
 import com.one.prototype.simple.Prototype;
