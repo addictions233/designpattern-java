@@ -23,6 +23,8 @@ public class DeepCloneTest {
 //        Student clone = prototype.serializationUtilsClone();
         // 调用clone方法的类必须实现Cloneable接口
         System.out.println(prototype);
+        prototype.setAddress(new Address("广东省", "深圳市"));
+        System.out.println(clone);
         System.out.println(prototype == clone);
         System.out.println(prototype.getAddress() == clone.getAddress()); // 打印false表示深拷贝
     }

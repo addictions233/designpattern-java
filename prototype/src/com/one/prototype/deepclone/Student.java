@@ -79,12 +79,12 @@ public class Student implements Cloneable, Serializable {
 //        return student;
 
         // 如果直接这么写, 克隆出来的student对象的address属性是相同的,属于浅拷贝
-//        return (Student) super.clone();
+        return (Student) super.clone();
 
         // 深度拷贝需要拷贝两次
-        Student clone = (Student) super.clone();
-        clone.address = clone.address.clone();
-        return clone;
+//        Student clone = (Student) super.clone();
+//        clone.address = clone.address.clone();
+//        return clone;
     }
 
     /**
