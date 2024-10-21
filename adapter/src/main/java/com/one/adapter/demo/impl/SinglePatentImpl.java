@@ -1,4 +1,6 @@
-package com.one.adapter.demo;
+package com.one.adapter.demo.impl;
+
+import com.one.adapter.demo.SinglePatent;
 
 import java.math.BigDecimal;
 import java.util.HashMap;
@@ -11,7 +13,7 @@ import java.util.function.Function;
  * @author wanjunjie
  * @date 2023/9/19
  */
-public class SinglePatentImpl implements SinglePatent{
+public class SinglePatentImpl implements SinglePatent {
 	/**
 	 * 通过专利id获取专利对应的授权年限
 	 *

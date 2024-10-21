@@ -1,5 +1,7 @@
 package com.one.adapter.demo;
 
+import com.one.adapter.demo.impl.BatchPatentImpl;
+
 import java.math.BigDecimal;
 import java.util.Arrays;
 
@@ -16,11 +18,5 @@ public class Main {
 		System.out.println(Arrays.toString(pIdArr));
 		BigDecimal amount = adapter.getRenewalAmount("pid_1", pIdArr);
 		System.out.println(amount);
-		System.out.println("-----------------------------------");
-		SinglePatentImpl2 singlePatentImpl2 = new SinglePatentImpl2(adapter);
-		String[] pIdArr2 = singlePatentImpl2.getPatentYears("pid_1");
-		System.out.println(Arrays.toString(pIdArr2));
-		BigDecimal amount2 = singlePatentImpl2.getRenewalAmount("pid_1", pIdArr2);
-		System.out.println(amount2);
 	}
 }

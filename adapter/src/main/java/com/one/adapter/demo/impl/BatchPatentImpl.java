@@ -1,4 +1,6 @@
-package com.one.adapter.demo;
+package com.one.adapter.demo.impl;
+
+import com.one.adapter.demo.BatchPatent;
 
 import java.math.BigDecimal;
 import java.util.Arrays;
