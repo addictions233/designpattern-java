@@ -1,4 +1,4 @@
-package com.one.adapter;
+package com.one.adapter.demo;
 
 import java.math.BigDecimal;
 import java.util.HashMap;

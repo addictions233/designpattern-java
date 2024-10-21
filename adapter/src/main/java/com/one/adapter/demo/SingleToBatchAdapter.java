@@ -1,4 +1,4 @@
-package com.one.adapter;
+package com.one.adapter.demo;
 
 /**
  *
