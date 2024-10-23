@@ -6,7 +6,7 @@ import java.math.BigDecimal;
 import java.util.Arrays;
 
 /**
- * 测试类
+ * 测试类: 通过适配器使用批量专利授权能完全替换单个专利授权
  *
  * @author wanjunjie
  * @date 2023/9/19
