@@ -18,6 +18,7 @@ public class LoginByPhoneAdapter extends AbstractLoginAdapter{
         if (!support(adapter)) {
             return null;
         }
+        System.out.println("使用手机号验证登录");
         return super.loginForRegist(id, null);
     }
 }

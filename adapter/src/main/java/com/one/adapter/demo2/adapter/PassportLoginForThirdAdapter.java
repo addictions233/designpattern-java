@@ -6,7 +6,7 @@ import javax.sql.DataSource;
 
 /**
  * @author one
- * @description TODO
+ * @description 遵循最少知道原则, 统一所有的登录适配器, 统一对外提供登录功能, 但是违背了单一职责原则
  * @date 2024-10-23
  */
 public class PassportLoginForThirdAdapter implements IPassportForThird{
@@ -32,6 +32,7 @@ public class PassportLoginForThirdAdapter implements IPassportForThird{
 
     private ResultMsg processLogin(String id, Class<? extends ILoginAdapter> clazz) {
         try {
+            // 使用工厂模式创建具体的职责对象
             ILoginAdapter adapter = clazz.newInstance();
             if (adapter.support(adapter)) {
                 return adapter.login(id, adapter);

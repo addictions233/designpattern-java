@@ -4,7 +4,7 @@ import com.one.adapter.demo2.ResultMsg;
 
 /**
  * @author one
- * @description TODO
+ * @description 测试类
  * @date 2024-10-23
  */
 public class Main {

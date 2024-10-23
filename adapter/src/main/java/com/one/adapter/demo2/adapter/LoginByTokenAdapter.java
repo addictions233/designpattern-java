@@ -8,6 +8,11 @@ import com.one.adapter.demo2.ResultMsg;
  * @date 2024-10-23
  */
 public class LoginByTokenAdapter extends AbstractLoginAdapter{
+
+    /**
+     * 每种适配器都有自己支持的策略
+     * @return
+     */
     @Override
     public boolean support(Object adapter) {
         return adapter instanceof LoginByTokenAdapter;
@@ -18,6 +23,7 @@ public class LoginByTokenAdapter extends AbstractLoginAdapter{
         if (!support(adapter)) {
             return null;
         }
+        System.out.println("使用Token验证登录");
         return super.login(id, null);
     }
 }

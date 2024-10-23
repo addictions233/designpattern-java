@@ -7,6 +7,10 @@ import com.one.adapter.demo2.ResultMsg;
  */
 public class LoginByQQAdapter extends AbstractLoginAdapter {
 
+    /**
+     * 每种适配器都有自己支持的策略
+     * @return
+     */
     @Override
     public boolean support(Object adapter) {
         return adapter instanceof LoginByQQAdapter;
@@ -17,6 +21,7 @@ public class LoginByQQAdapter extends AbstractLoginAdapter {
         if  (!support(adapter)) {
             return null;
         }
+        System.out.println("使用QQ授权登录");
         return super.loginForRegist(id, null);
     }
 }
