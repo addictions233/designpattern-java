@@ -1,14 +1,12 @@
-package com.one.test;
-
-import com.one.strategy.CashBackStrategy;
-import com.one.strategy.CouponStrategy;
-import com.one.strategy.PromotionActivity;
+package com.one.strategy;
 
 /**
  * @author one
- * 测试促销策略的使用
+ * @description TODO
+ * @date 2024-11-8
  */
-public class PromotionActivityTest {
+public class Main {
+
     public static void main(String[] args) {
         // 618促销发优惠券
         PromotionActivity activity618 = new PromotionActivity(new CouponStrategy());
