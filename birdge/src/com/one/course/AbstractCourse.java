@@ -2,7 +2,7 @@ package com.one.course;
 
 /**
  * @author one
- * @description 使用抽象类作为桥接
+ * @description 使用抽象类作为桥接: 抽象桥接类遵循了组合复用原则
  * @date 2024-10-29
  */
 public abstract class AbstractCourse implements ICourse{
