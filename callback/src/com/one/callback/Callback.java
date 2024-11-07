@@ -7,5 +7,5 @@ package com.one.callback;
  * @Date: 2020/12/04
  */
 public interface Callback {
-    public abstract void notifyUser();
+    void call();
 }

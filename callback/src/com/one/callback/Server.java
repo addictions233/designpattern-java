@@ -9,11 +9,14 @@ package com.one.callback;
 public class Server {
     public void recharge(Callback callback){
         try {
-            Thread.sleep(3000); //该线程休眠3秒,进行充值
-            callback.notifyUser();   //调用回调方法
+            // 该线程休眠3秒, 模拟进行充值服务
+            Thread.sleep(3000);
+            if (callback != null) {
+                // 充值成功后, 调用回调方法
+                callback.call();
+            }
         } catch (InterruptedException e) {
             System.out.println("充值失败....");
-            e.printStackTrace();
         }
     }
 }
