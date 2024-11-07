@@ -2,7 +2,7 @@ package com.one.command.general;
 
 /**
  * @author one
- * @description TODO
+ * @description 命令模式: 实现命令的发送方和命令的执行方解耦
  * @date 2024-11-7
  */
 public class Main {
