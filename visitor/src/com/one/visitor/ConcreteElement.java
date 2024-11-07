@@ -15,6 +15,7 @@ public class ConcreteElement implements Element {
 
     @Override
     public void accept(Visitor visitor) {
+        // 调用访问器的访问方法
         visitor.visit(this);
     }
 

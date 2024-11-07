@@ -8,18 +8,21 @@ package com.one.iterator;
 public class Main {
 
     public static void main(String[] args) {
-        Aggregate ag = new ConcreteAggregate();
-        ag.add("中山大学");
-        ag.add("华南理工");
-        ag.add("韶关学院");
+        Aggregate aggregate = new ConcreteAggregate();
+        aggregate.add("中山大学");
+        aggregate.add("华南理工");
+        aggregate.add("韶关学院");
         System.out.print("聚合的内容有：");
-        Iterator it = ag.getIterator();
-        while (it.hasNext()) {
-            Object ob = it.next();
+        // 获取迭代器
+        Iterator iterator = aggregate.getIterator();
+        // 使用迭代器遍历所有的元素
+        while (iterator.hasNext()) {
+            Object ob = iterator.next();
             System.out.print(ob.toString() + "\n");
         }
         System.out.println("----------------------------");
-        Object ob = it.first();
+        // 使用迭代器获取第一个集合元素
+        Object ob = iterator.first();
         System.out.println("First：" + ob.toString());
     }
 }

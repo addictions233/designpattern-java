@@ -22,6 +22,9 @@ public class ConcreteAggregate implements Aggregate{
         list.remove(obj);
     }
 
+    /**
+     * 获取迭代器
+     */
     @Override
     public Iterator getIterator() {
         return new ConcreteIterator(this.list);
