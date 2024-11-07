@@ -4,12 +4,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @description: TODO
+ * @description: 具体中介者（Concrete Mediator）角色：实现中介者接口，定义一个 List 来管理同事对象，协调各个同事角色之间的交互关系，因此它依赖于同事角色。
+ *
  * @author: wanjunjie
  * @date: 2024/11/05
  */
 public class ConcreteMediator extends Mediator {
 
+    /**
+     * 具体的中介者持有所有的同事对象
+     */
     private List<Colleague> colleagueList = new ArrayList<>();
 
     /**

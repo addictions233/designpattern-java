@@ -1,7 +1,7 @@
 package com.one.mediator;
 
 /**
- * @description: TODO
+ * @description: 中介模式: 定义一个中介对象来简化原有对象之间的交互关系，降低系统中对象间的耦合度，使原有对象之间不必相互了解。
  * @author: wanjunjie
  * @date: 2024/11/05
  */
