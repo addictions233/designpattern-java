@@ -1,7 +1,7 @@
 package com.one.state;
 
 /**
- * @description: TODO
+ * @description: 具体状态（Concrete State）角色：实现抽象状态所对应的行为，并且在需要的情况下进行状态切换。
  * @author: wanjunjie
  * @date: 2024/11/05
  */

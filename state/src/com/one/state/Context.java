@@ -1,7 +1,7 @@
 package com.one.state;
 
 /**
- * @description: 上下文
+ * @description: 环境类（Context）角色：也称为上下文，它定义了客户端需要的接口，内部维护一个当前状态，并负责具体状态的切换。
  * @author: wanjunjie
  * @date: 2024/11/05
  */
