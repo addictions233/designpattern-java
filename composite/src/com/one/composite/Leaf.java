@@ -1,7 +1,7 @@
 package com.one.composite;
 
 /**
- * @description: TODO
+ * @description: 树叶构件（Leaf）角色：是组合中的叶节点对象，它没有子节点，用于继承或实现抽象构件。
  * @author: wanjunjie
  * @date: 2024/11/07
  */
