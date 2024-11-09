@@ -1,4 +1,4 @@
-package com.one.decorate;
+package com.one.decorate.simple;
 
 /**
  * 测试类型
@@ -13,6 +13,7 @@ public class Main {
 		System.out.println("-------------------------------------------");
 		Decorator decoratorB = new ConcreteDecoratorB(decoratorA);
 		decoratorB.operation();
+
 
 	}
 }

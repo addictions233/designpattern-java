@@ -1,4 +1,4 @@
-package com.one.decorate;
+package com.one.decorate.simple;
 
 /**
  * 包装类对Component接口进行扩展: 装饰者模式区别于继承的点

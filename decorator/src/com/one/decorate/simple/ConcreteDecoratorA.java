@@ -1,4 +1,4 @@
-package com.one.decorate;
+package com.one.decorate.simple;
 
 /**
  * 具体的装饰实现类

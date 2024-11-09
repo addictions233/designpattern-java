@@ -1,4 +1,4 @@
-package com.one.decorate;
+package com.one.decorate.simple;
 
 /**
  * 定义一个接口, 规范某种功能
