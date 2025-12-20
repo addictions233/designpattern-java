@@ -7,8 +7,6 @@ package com.one.dependenceinversion;
  */
 public class Geely {
 
-
-
     private ICourse iCourse;
 
     public Geely(ICourse iCourse) {

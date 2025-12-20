@@ -1,5 +1,8 @@
 package com.one.course;
 
+import com.one.note.INote;
+import com.one.video.IVideo;
+
 /**
  * @author one
  * @description 使用抽象类作为桥接: 抽象桥接类遵循了组合复用原则

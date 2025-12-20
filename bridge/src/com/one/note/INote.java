@@ -1,4 +1,4 @@
-package com.one.course;
+package com.one.note;
 
 public interface INote {
 
