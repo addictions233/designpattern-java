@@ -8,6 +8,6 @@ package com.one.observer.simple;
 public class ConcreteObserverB implements Observer{
     @Override
     public void respond() {
-        System.out.println("具体的观察者B做出了反应...");
+        System.out.println("得到通知,具体的观察者B做出了反应...");
     }
 }
