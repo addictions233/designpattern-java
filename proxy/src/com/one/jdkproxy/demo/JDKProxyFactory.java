@@ -18,15 +18,15 @@ public class JDKProxyFactory {
      * @return 代理对象
      */
     public static Object getProxy(Object target){
-        return Proxy.newProxyInstance(target.getClass().getClassLoader(),
-                target.getClass().getInterfaces(),
-
-                new InvocationHandler() {
+        return Proxy.newProxyInstance(
+                target.getClass().getClassLoader(), // 目标对象的类加载器
+                target.getClass().getInterfaces(), // 目标对象实现的接口
+                new InvocationHandler() { // 构建处理器对象
                     /**
                      * @param proxy 代理对象
-                     * @param method 代理执行的方法
+                     * @param method 代理执行的接口方法Method实例
                      * @param args 方法参数
-                     * @return 方法执行的结果
+                     * @return 返回目标对象方法的返回值
                      * @throws Throwable 异常信息
                      */
                     @Override
@@ -46,6 +46,7 @@ public class JDKProxyFactory {
                         }
                         System.out.println("------------------------------");
                         System.out.println("反射调用方法的结果:");
+                        // 利用反射动态的来反射方法，这就是动态代理和静态代理的区别
                         return method.invoke(target,args);
                     }
                 });
