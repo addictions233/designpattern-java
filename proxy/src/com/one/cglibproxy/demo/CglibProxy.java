@@ -47,6 +47,7 @@ public class CglibProxy implements MethodInterceptor {
         // cglib动态代理调用目标对象的方法与jdk动态代理有很大区别, jdk动态代理是直接利用目标对象反射进行调用的
         // 而cglib动态代理调用目标对象的方法是用的代理对象proxy,调用的代理方法methodProxy,而不是用的目标对象的方法method
         // 调用invokeSupper()方法其实是调用的FastClass的invoke()方法,而FastClass对象又是动态生成的字节码
+        // FastClass保存了目标对象的一些信息, 可以通过调用FastClass#invok()方法, 来调用目标对象的方法
         Object result = methodProxy.invokeSuper(proxy, objects);
         System.out.println("after advance");
         return result;
