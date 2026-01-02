@@ -19,7 +19,7 @@ public class ProxyFactory {
         Enhancer enhancer = new Enhancer();
         // Cglib是基于继承实现的, 设置代理类父类的字节码对象
         enhancer.setSuperclass(target.getClass());
-
+        // 设置回调: 对于代理类上所有的方法的调用, 都会调用Callback, 而Callback则需要实现intercept()方法进行拦截
         enhancer.setCallback(new MethodInterceptor() {
             /**
              *
