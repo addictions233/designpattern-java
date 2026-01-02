@@ -1,4 +1,4 @@
-package com.one.cglibproxy;
+package com.one.cglibproxy.demo;
 
 import net.sf.cglib.proxy.Enhancer;
 import net.sf.cglib.proxy.MethodInterceptor;
@@ -16,7 +16,7 @@ import java.lang.reflect.Method;
  *           3, CGlib不能调用final的方法
  * @date 2022-10-14
  */
-public class CGlibMeiPo implements MethodInterceptor {
+public class CglibProxy implements MethodInterceptor {
 
     /**
      * 获取CGlib的动态代理对象
@@ -43,20 +43,13 @@ public class CGlibMeiPo implements MethodInterceptor {
      */
     @Override
     public Object intercept(Object proxy, Method method, Object[] objects, MethodProxy methodProxy) throws Throwable {
-        before();
+        System.out.println("before advance");
         // cglib动态代理调用目标对象的方法与jdk动态代理有很大区别, jdk动态代理是直接利用目标对象反射进行调用的
         // 而cglib动态代理调用目标对象的方法是用的代理对象proxy,调用的代理方法methodProxy,而不是用的目标对象的方法method
         // 调用invokeSupper()方法其实是调用的FastClass的invoke()方法,而FastClass对象又是动态生成的字节码
         Object result = methodProxy.invokeSuper(proxy, objects);
-        after();
+        System.out.println("after advance");
         return result;
     }
 
-    private void before() {
-        System.out.println("我是媒婆, 我要给你找对象, 现在已经确认你的需求");
-    }
-
-    private void after() {
-        System.out.println("已经成功帮你匹配到对象");
-    }
 }

@@ -18,15 +18,16 @@ public class Main {
 //        JDKProxyExample example = new JDKProxyExample();
 //        HelloWorld proxy =  (HelloWorld)example.getProxyObject(helloWorld);
 //        proxy.sayHelloWorld();
-//
+        // 目标对象和代理对象实现相同的接口
         HelloWorld proxy =(HelloWorld) JDKProxyFactory.getProxy(helloWorld);
-        //用 代理对象调用任何方法,都会进入到 invoke()方法中执行..
+        //用代理对象调用任何方法,都会进入到 InvocationHandler#invoke()方法中执行..
         //代理对象调用的方法传参数给 method, 方法中的参数传递给 args
         System.out.println("=======================打印proxy对象如下:================");
         System.out.println(proxy);
         System.out.println("=====================打印proxy对象中的方法如下:===================");
         Method[] methods = proxy.getClass().getDeclaredMethods();
         for (Method method : methods) {
+            System.out.println("=================================");
             System.out.println(method);    //public final void com.sun.proxy.$Proxy0.sayHelloWorld(java.lang.String)
         }
         System.out.println("==================下面的是调用invoke()方法的输出结果================");
