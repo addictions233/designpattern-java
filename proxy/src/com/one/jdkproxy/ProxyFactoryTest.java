@@ -9,9 +9,10 @@ public class ProxyFactoryTest {
     @Test
     public void testProxyFactory() {
         IUserDao userDao = new UserDaoImpl();
-
+        System.out.println(userDao.getClass());
         // 生成代理对象
         IUserDao proxy = (IUserDao)new ProxyFactory(userDao).getProxy();
+        System.out.println(proxy.getClass());
         proxy.save();
     }
 }
