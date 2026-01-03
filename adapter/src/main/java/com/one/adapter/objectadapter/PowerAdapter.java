@@ -3,9 +3,12 @@ package com.one.adapter.objectadapter;
 
 
 /**
- * Created by Tom.
+ * 对象适配器模式: 以组合的方式来持有对象
  */
 public class PowerAdapter implements DC5 {
+    /**
+     * 以属性的方式持有Adaptee
+     */
     private AC220 ac220;
 
     public PowerAdapter(AC220 ac220) {

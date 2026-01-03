@@ -1,6 +1,7 @@
 package com.one.adapter.classadapter;
 
 /**
+ * 类适配器模式: 以继承的方式持有Adaptee
  * 适配器一般包含三种角色:
  *  1. 目标角色(Target): 也就是我们期望的功能接口
  *  2. 原角色(Adaptee): 存在于系统中, 内容满足客户需求(需要转换), 但是接口不匹配的接口实例
