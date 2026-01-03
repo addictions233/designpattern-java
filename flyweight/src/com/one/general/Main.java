@@ -11,10 +11,10 @@ public class Main {
         // 达到对象公用的目的
         IFlyweight first = FlyweightFactory.getFlyweight("first");
         first.operate("你好");
-        System.out.println("-------------------------------------------------------");
+        System.out.println("============================");
         IFlyweight second = FlyweightFactory.getFlyweight("second");
         second.operate("我好");
-        System.out.println("-------------------------------------------------------");
+        System.out.println("=============================");
         IFlyweight third = FlyweightFactory.getFlyweight("first");
         third.operate("他好");
     }
