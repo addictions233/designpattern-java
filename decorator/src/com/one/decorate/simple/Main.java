@@ -10,7 +10,7 @@ public class Main {
 	public static void main(String[] args) {
 		Decorator decoratorA = new ConcreteDecoratorA(new ConcreteComponent());
 		decoratorA.operation();
-		System.out.println("-------------------------------------------");
+		System.out.println("==================================");
 		Decorator decoratorB = new ConcreteDecoratorB(decoratorA);
 		decoratorB.operation();
 
