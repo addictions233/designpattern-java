@@ -16,5 +16,11 @@ public class AdapterTest {
         String data2 = computer.readData(new SDAdapterTF());
         System.out.println(data2);
 
+        System.out.println("===============================");
+        // 测试对象适配器模式, 上面的是类适配器模式
+        TFCard tfCard = new TFCardImpl();
+        String data3 = computer.readData(new SDAdapterTF2(tfCard));
+        System.out.println(data3);
+
     }
 }
