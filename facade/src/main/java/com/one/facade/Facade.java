@@ -1,6 +1,8 @@
 package com.one.facade;
 
 /**
+ * 外观模式( Facade Pattern)，也叫门面模式,
+ * 外观模式的原始定义是：为子系统中的一组接口提供统一的接口。它定义了一个更高级别的接口，使子系统更易于使用。
  * @author one
  * @description 学习门面设计模式: 将多个对象的功能封装到一个对象中
  * @date 2024-2-21
