@@ -17,6 +17,11 @@ public class FlyweightFactory {
      */
     private static final Map<String, IFlyweight> CACHE_POOL = new ConcurrentHashMap<>();
 
+    /**
+     * 采用工厂模式获取享元对象, 共享的享元对象是单例的
+     * @param innerState 内部状态
+     * @return 享元对象
+     */
     public static IFlyweight getFlyweight(String innerState) {
         // 用户获取享元对象先从享元池中获取, 有则返回, 没有则创建对象返回给用户
         if (!CACHE_POOL.containsKey(innerState)) {
