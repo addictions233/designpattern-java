@@ -6,5 +6,9 @@ package com.one.general;
  */
 public interface IFlyweight {
 
+    /***
+     * 参数传递的是外部状态
+     * @param externalState 外部状态
+     */
     void operate(String externalState);
 }
