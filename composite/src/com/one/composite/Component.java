@@ -9,11 +9,23 @@ package com.one.composite;
  */
 public interface Component {
 
+    /**
+     * 新增节点
+     */
     void add (Component component);
 
+    /**
+     * 删除节点
+     */
     void remove(Component component);
 
+    /**
+     * 获取节点
+     */
     Component getChild(int index);
 
+    /**
+     * 业务方法
+     */
     void operation();
 }

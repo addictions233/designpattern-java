@@ -15,16 +15,17 @@ public class Leaf implements Component{
 
     @Override
     public void add(Component component) {
-
+        // 业务节点不能包含子节点, 所有是空实现
     }
 
     @Override
     public void remove(Component component) {
-
+        // 业务节点不能包含子节点, 所有是空实现
     }
 
     @Override
     public Component getChild(int index) {
+        // 业务节点不能包含子节点, 所有是空实现
         return null;
     }
 
