@@ -2,6 +2,9 @@ package com.one.example01;
 
 public class TrafficLight {
 
+    /**
+     * Context持有State对象
+     */
     private Light light;
 
     public TrafficLight(Light light) {
