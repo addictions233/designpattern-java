@@ -1,0 +1,18 @@
+package com.one.example01;
+
+public class TrafficLight {
+
+    private Light light;
+
+    public TrafficLight(Light light) {
+        this.light = light;
+    }
+
+    public void setLight(Light light) {
+        this.light = light;
+    }
+
+    public void startShowAndSwitch() {
+        this.light.showAndSwitch(this);
+    }
+}

@@ -7,6 +7,9 @@ package com.one.command.general;
  */
 public class Receiver {
 
+    /**
+     * 接收者是真正执行命令的对象, 实现命令所要求的功能
+     */
     public void action() {
         System.out.println("执行具体操作");
     }

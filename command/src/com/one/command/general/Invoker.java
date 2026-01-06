@@ -7,6 +7,9 @@ package com.one.command.general;
  */
 public class Invoker {
 
+    /**
+     * 调用者持有命令对象
+     */
     private ICommand command;
 
     public Invoker(ICommand command) {
