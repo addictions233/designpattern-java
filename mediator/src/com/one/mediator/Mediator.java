@@ -15,5 +15,5 @@ public abstract class Mediator {
     /**
      * 转发
      */
-    public  abstract void relay(Colleague colleague);
+    public  abstract void relay(String msgKey);
 }

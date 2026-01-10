@@ -10,12 +10,13 @@ public class Main {
     public static void main(String[] args) {
         Mediator md = new ConcreteMediator();
         Colleague c1, c2;
-        c1 = new ConcreteColleague1();
-        c2 = new ConcreteColleague2();
+        c1 = new ConcreteColleague1("key-1");
+        c2 = new ConcreteColleague2("key-2");
+        // 中介者对象注册具体的同事对象
         md.register(c1);
         md.register(c2);
-        c1.send();
+        c1.send("key-2");
         System.out.println("-------------");
-        c2.send();
+        c2.send("key-1");
     }
 }

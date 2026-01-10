@@ -32,13 +32,14 @@ public class ConcreteMediator extends Mediator {
     /**
      * 转发
      *
-     * @param colleague
+     * @param msgKey
      */
     @Override
-    public void relay(Colleague colleague) {
+    public void relay(String msgKey) {
+        // 中介者协调具体的同事交互
         for (Colleague col : colleagueList) {
-            if (col.equals(colleague)) {
-                col.receive();
+            if (col.support(msgKey)) { // 中介者自己定义交互规则
+                col.receive(msgKey);
             }
         }
     }

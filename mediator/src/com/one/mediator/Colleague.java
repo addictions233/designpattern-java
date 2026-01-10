@@ -6,13 +6,34 @@ package com.one.mediator;
  * @date: 2024/11/05
  */
 public abstract class Colleague {
+
+    /**
+     * 保存中介者对象
+     */
     protected Mediator mediator;
 
+    protected String supportKey;
+
+    public Colleague(String supportKey) {
+        this.supportKey = supportKey;
+    }
+
+    protected boolean support(String msgKey) {
+        return supportKey.equals(msgKey);
+    }
+
+    /**
+     * 定义设置中介对象的方法
+     * @param mediator
+     */
     public void setMediator(Mediator mediator) {
         this.mediator = mediator;
     }
 
-    public abstract void receive();
+    /**
+     * 同事间交互的方法
+     */
+    public abstract void receive(String msgKey);
 
-    public abstract  void send();
+    public abstract  void send(String msgKey);
 }

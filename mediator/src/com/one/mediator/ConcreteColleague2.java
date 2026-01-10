@@ -6,14 +6,19 @@ package com.one.mediator;
  * @date: 2024/11/05
  */
 public class ConcreteColleague2 extends Colleague {
-    @Override
-    public void receive() {
-        System.out.println("具体同事类2收到了请求");
+
+    public ConcreteColleague2(String supportKey) {
+        super(supportKey);
     }
 
     @Override
-    public void send() {
-        System.out.println("具体同事类2发出了请求");
-        super.mediator.relay(this);
+    public void receive(String msgKey) {
+        System.out.println("具体同事类2收到了请求, msgKey:" + msgKey);
+    }
+
+    @Override
+    public void send(String msgKey) {
+        System.out.println("具体同事类2发出了请求:" + msgKey);
+        super.mediator.relay(msgKey);
     }
 }
