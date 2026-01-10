@@ -7,7 +7,7 @@ import java.beans.PropertyChangeSupport;
  * @author one
  * 可以使用java.beans包里的PropertyChangeEvent 和 PropertyChangeListener 来代替目前Observer和Observable的功能。
  */
-public class ChangeName {
+public class PropertyChangeName {
 
     private String name;
 
@@ -16,7 +16,7 @@ public class ChangeName {
      */
     private PropertyChangeSupport listeners = new PropertyChangeSupport(this);
 
-    public ChangeName() {
+    public PropertyChangeName() {
         this.name = "my name";
     }
 
