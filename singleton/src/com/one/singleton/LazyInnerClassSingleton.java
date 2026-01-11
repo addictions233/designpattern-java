@@ -34,6 +34,8 @@ public class LazyInnerClassSingleton implements Serializable {
      * 只有当外部方法调用时才会执行LAZY_INSTANCE的初始化逻辑,所以算懒汉式单例
      */
     private static class LazyHolder{
+
+        // 在静态内部类中创建单例, 在装载内部类的时候, 才会创建单例对象
         private static final LazyInnerClassSingleton LAZY_INSTANCE = new LazyInnerClassSingleton();
     }
 
