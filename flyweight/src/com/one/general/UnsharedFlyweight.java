@@ -1,7 +1,7 @@
 package com.one.general;
 
 /**
- * 非共享的具体享元类
+ * 非共享的具体享元类: 每次都是创建一个新的非共享享元角色
  */
 public class UnsharedFlyweight implements IFlyweight{
 

@@ -12,7 +12,7 @@ import java.util.concurrent.ConcurrentHashMap;
 public class FlyweightFactory {
 
     /**
-     * 存储享元对象的享元池
+     * 存储享元对象的享元池, 使用单例模式保存可共享的享元角色
      * 将对象放入缓存池中, 以达到复用, 避免频繁的创建和销毁常用的对象
      */
     private static final Map<String, IFlyweight> CACHE_POOL = new ConcurrentHashMap<>();
