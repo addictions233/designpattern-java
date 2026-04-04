@@ -11,7 +11,7 @@ import java.util.Observer;
  * @Author: one
  * @Date: 2022/05/08
  */
-public class Blogger implements Observer {
+public class Blogger implements Observer { // JDK提供的Observer接口, 充当被观察者
     /**
      * 博主名称
      */

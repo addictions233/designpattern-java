@@ -14,11 +14,15 @@ import com.one.observer.demo.ZhiHu;
  */
 public class Main {
     public static void main(String[] args) {
-        // 获取知乎论坛对象
+        // 获取知乎论坛对象 (被观察者)
         ZhiHu zhiHu = ZhiHu.getInstance();
+
         // 让观察者对象启动监听
         Blogger blogger = new Blogger("java大神");
         zhiHu.addObserver(blogger);
+
+        Blogger blogger1 = new Blogger("python大神");
+        zhiHu.addObserver(blogger1);
 
         // 被观察者触发通知事件
         // 创建问题对象

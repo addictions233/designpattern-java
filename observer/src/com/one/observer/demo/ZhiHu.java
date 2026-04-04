@@ -8,7 +8,7 @@ import java.util.Observable;
  * @Author: one
  * @Date: 2022/05/08
  */
-public class ZhiHu extends Observable {
+public class ZhiHu extends Observable { // JDK提供的Observable类, 充当被观察者
     /**
      * 单例模式创建知乎问答对象
      */
