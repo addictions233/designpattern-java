@@ -13,6 +13,7 @@ public abstract class Subject {
 
     /**
      * 被观察者(Observable) : 持有观察者(Observer)
+     * 面向抽象编程, 抽象依赖抽象, 不依赖具体的实现
      */
     protected List<Observer> observers = new ArrayList<>();
 
