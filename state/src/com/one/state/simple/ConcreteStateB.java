@@ -8,7 +8,9 @@ package com.one.state.simple;
 public class ConcreteStateB extends State {
     @Override
     public void handle(Context context) {
+        // 当前状态的行为
         System.out.println("当前状态是B");
+        // 切换到下一个状态
         context.setState(new ConcreteStateA());
     }
 }
