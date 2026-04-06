@@ -7,6 +7,9 @@ package com.one.memento;
  */
 public class Originator {
 
+    /**
+     * 记录内部状态
+     */
     private String state;
 
     public String getState() {
@@ -17,10 +20,18 @@ public class Originator {
         this.state = state;
     }
 
+    /**
+     * 发起备忘录的方法
+     * @return
+     */
     public Memento createMemento() {
         return new Memento(state);
     }
 
+    /**
+     * 恢复备忘录的方法
+     * @param memento
+     */
     public void restoreMemento(Memento memento) {
         this.setState(memento.getState());
     }
