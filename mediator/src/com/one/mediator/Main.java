@@ -8,6 +8,7 @@ package com.one.mediator;
 public class Main {
 
     public static void main(String[] args) {
+        // 中介模式: 将多对多的关系转换为一对多的关系
         Mediator md = new ConcreteMediator();
         Colleague c1, c2;
         c1 = new ConcreteColleague1("key-1");

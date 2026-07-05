@@ -2,7 +2,7 @@ package com.one.command.general;
 
 /**
  * @author one
- * @description 命令调用者
+ * @description 命令调用者: 即命令模式的调用入口
  * @date 2024-11-7
  */
 public class Invoker {
