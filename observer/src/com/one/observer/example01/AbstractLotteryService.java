@@ -30,6 +30,9 @@ public abstract class AbstractLotteryService {
         // 发生事件之后, 通知所有的观察者
         this.eventManager.notifyListener(EventManager.EventType.Message, lotteryResult);
         this.eventManager.notifyListener(EventManager.EventType.MQ, lotteryResult);
+
+        // 打印摇号结果
+        System.out.println(lotteryResult);
     }
 
 
