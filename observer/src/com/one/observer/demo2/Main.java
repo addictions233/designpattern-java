@@ -11,14 +11,20 @@ import java.beans.PropertyChangeListener;
  */
 public class Main {
     public static void main(String[] args) {
+        // 创建被观察者对象
         PropertyChangeName propertyChangeName = new PropertyChangeName();
-        propertyChangeName.addPropertyChangeListener(new PropertyChangeListener(){
+
+        // 向被观察者中添加观察者对象
+        propertyChangeName.addPropertyChangeListener(new PropertyChangeListener() {
             @Override
             public void propertyChange(PropertyChangeEvent event) {
-                System.out.println("OldValue:"+event.getOldValue());
-                System.out.println("NewValue:"+event.getNewValue());
-                System.out.println("tPropertyName:"+event.getPropertyName());
-            }});
+                System.out.println("OldValue:" + event.getOldValue());
+                System.out.println("NewValue:" + event.getNewValue());
+                System.out.println("propertyName:" + event.getPropertyName());
+            }
+        });
+
+        // 被观察者事件发生变化, 通知观察者
         propertyChangeName.setName("new Name");
     }
 }
