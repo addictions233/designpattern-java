@@ -5,7 +5,7 @@ import java.util.Observable;
 import java.util.Observer;
 
 /**
- * @ClassName: Teacher
+ * @ClassName: Blogger 观察者角色
  * @Description: 博主监听问题(充当观察者),当有人在知乎论题提问时,通知博主
  *                     使用JDK自带的观察者设计模式: 观察者是实现java.util.Observer接口
  * @Author: one

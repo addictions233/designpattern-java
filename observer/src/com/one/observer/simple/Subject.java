@@ -29,7 +29,7 @@ public abstract class Subject {
      * 删除观察者
      * @param observer
      */
-    public void remove(Observer observer) {
+    public void removeObserver(Observer observer) {
         observers.remove(observer);
     }
 
