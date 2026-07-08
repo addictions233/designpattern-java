@@ -11,7 +11,7 @@ public abstract class AbstactTemplateClass {
     }
 
     /**
-     * 在抽象父类中定义模板方法
+     * 在抽象父类中定义模板方法: 模板方法是定义在模板抽象类中的
      */
     private void step1(String key) {
         System.out.println("在模板类中 --> 执行step1");
@@ -41,7 +41,7 @@ public abstract class AbstactTemplateClass {
     abstract void step4();
 
     /**
-     * 钩子函数, 提供子类扩展 模板类的子类可以重新, 也可以不重新
+     * 钩子函数, 提供子类扩展 模板类的子类可以重写, 也可以不重写
      */
     protected void hook() {
     }
