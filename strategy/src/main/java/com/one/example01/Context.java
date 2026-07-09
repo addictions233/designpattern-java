@@ -8,6 +8,9 @@ import java.util.List;
  */
 public class Context {
 
+    /**
+     * 上下文对象中维持对所有策略的引用
+     */
     private List<Strategy> list = new ArrayList<>();
 
     public Context() {
@@ -17,8 +20,10 @@ public class Context {
 
     public void algorithm(String key) {
         for (Strategy strategy : list) {
+            // 通过support方法选择不通的策略执行
             if (strategy.support(key)) {
                 strategy.algorithm();
+                return;
             }
         }
     }

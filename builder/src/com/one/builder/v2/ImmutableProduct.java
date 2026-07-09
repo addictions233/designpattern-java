@@ -79,6 +79,7 @@ public class ImmutableProduct {
         }
 
         public ImmutableProduct build() {
+            // 建造者设计模式必须依赖对象的全参构造方法
             return new ImmutableProduct(productName, companyName, part1, part2, part3, part4);
         }
     }
