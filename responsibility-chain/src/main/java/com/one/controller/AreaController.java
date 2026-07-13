@@ -1,7 +1,7 @@
 package com.one.controller;
 
 import com.one.domain.Area;
-import com.one.filter.union.ChainPatternDemo;
+import com.one.filter.chain.ChainPatternDemo;
 import com.one.service.AreaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -28,50 +28,51 @@ public class AreaController {
     @Autowired
     private ChainPatternDemo chainPatternDemo;
 
-    @GetMapping(value = "/listarea")
+    @GetMapping(value = "/list")
     public Map<String, Object> listArea(){
         Map<String, Object> modelMap = new HashMap<>();
+        // 执行所有的责任链
+        chainPatternDemo.execute(request,response);
         List<Area> list = areaService.getAreaList();
-        System.out.println("---" +  chainPatternDemo.execute(request,response));
         modelMap.put("areaList", list);
-        
         return modelMap;
     }
     
-    @GetMapping("/getarea")
-    public Map<String, Object> getAreaByAreaId(Integer areaId){
+    @GetMapping("/get/{areaId}")
+    public Map<String, Object> getAreaByAreaId(@PathVariable("areaId") Integer areaId){
         Map<String, Object> modelMap = new HashMap<>();
+        // 执行所有的责任链
+        chainPatternDemo.execute(request,response);
         Area area = areaService.getAreaByAreaId(areaId);
-        
         modelMap.put("area", area);
-        
         return modelMap;
     }
     
-    @PostMapping("/addarea")
+    @PostMapping("/add")
     public Map<String, Object> addArea(@RequestBody Area area){
         Map<String, Object> modelMap = new HashMap<>();
+        // 执行所有的责任链
+        chainPatternDemo.execute(request,response);
         modelMap.put("success", areaService.addArea(area));
-        
         return modelMap;
     }
 
-    @PostMapping("/modifyarea")
+    @PostMapping("/modify")
     public Map<String, Object> modifyArea(@RequestBody Area area){
         Map<String, Object> modelMap = new HashMap<>();
-
+        // 执行所有的责任链
+        chainPatternDemo.execute(request,response);
         modelMap.put("success", areaService.modifyArea(area));
-
         return modelMap;
     }
     
-    @GetMapping("/delarea")
-    public Map<String, Object> deleteArea(Integer areaId){
+    @GetMapping("/delete/{areaId}")
+    public Map<String, Object> deleteArea(@PathVariable("areaId") Integer areaId){
         System.out.println(areaId);
+        // 执行所有的责任链
+        chainPatternDemo.execute(request,response);
         Map<String, Object> modelMap = new HashMap<>();
-
         modelMap.put("success", areaService.deleteArea(areaId));
-
         return modelMap;
     } 
     

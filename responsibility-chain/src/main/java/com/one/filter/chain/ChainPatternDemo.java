@@ -1,6 +1,6 @@
-package com.one.filter.union;
+package com.one.filter.chain;
 
-import com.one.handler.AbstractHandler;
+import com.one.filter.AbstractHandler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -32,6 +32,7 @@ public class ChainPatternDemo {
             if (i == 0) {
                 abstractHandler = abstractHandleList.get(0);
             } else {
+                // 依次调用set方法, 形成责任链
                 AbstractHandler currentHandler = abstractHandleList.get(i - 1);
                 AbstractHandler nextHandler = abstractHandleList.get(i);
                 currentHandler.setNextHandler(nextHandler);
@@ -49,13 +50,5 @@ public class ChainPatternDemo {
     public HttpServletResponse execute(HttpServletRequest request, HttpServletResponse response) {
         abstractHandler.filter(request, response);
         return response;
-    }
-
-    public AbstractHandler getAbstractHandler() {
-        return abstractHandler;
-    }
-
-    public void setAbstractHandler(AbstractHandler abstractHandler) {
-        this.abstractHandler = abstractHandler;
     }
 }

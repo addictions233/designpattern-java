@@ -14,5 +14,7 @@ public class Main {
 
         // 只用责任链中的第一个节点处理, 后续责任链中的节点都会执行
         handlerA.handle(requestData);
+
+        System.out.println(requestData.getData());
     }
 }

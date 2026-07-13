@@ -1,6 +1,5 @@
 package com.one.filter;
 
-import com.one.handler.AbstractHandler;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 import javax.servlet.http.*;
@@ -15,7 +14,7 @@ public class CheckRuleFilterObject extends AbstractHandler {
 
     @Override
     public void doFilter(HttpServletRequest request, HttpServletResponse response) {
-        //check rule
-        System.out.println("check rule");
+        // check rule
+        System.out.println("规则校验");
     }
 }
