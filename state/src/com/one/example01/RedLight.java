@@ -4,6 +4,6 @@ public class RedLight implements Light{
     @Override
     public void showAndSwitch(TrafficLight trafficLight) {
         System.out.println("red light show 40s..");
-        trafficLight.setLight(new YellowLight());
+        trafficLight.setLight(new YellowLight(this));
     }
 }
