@@ -4,7 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * @description: 终结符表达式类
+ * @description: 终结符表达式类: 用来实现文法中与终结符相关的操作
  * @author: wanjunjie
  * @date: 2024/11/04
  */

@@ -17,10 +17,12 @@ public class Context {
     private AbstractExpression cityPerson;
 
     public Context() {
+        // 定义终结表达式对象
         AbstractExpression city = new TerminalExpression(cities);
 
         AbstractExpression person = new TerminalExpression(persons);
 
+        // 定义非终结表达式对象
         cityPerson = new AndExpression(city, person);
     }
 

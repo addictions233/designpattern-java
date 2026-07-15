@@ -1,7 +1,7 @@
 package com.one.interceptor;
 
 /**
- * @description: 非终结符表达式类
+ * @description: 非终结符表达式类: 用来实现文法中与非终结符相关的操作
  * @author: wanjunjie
  * @date: 2024/11/04
  */
