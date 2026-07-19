@@ -8,12 +8,14 @@ package com.one.composite;
 public class Main {
 
     public static void main(String[] args) {
+        // 定义树枝节点
         Component c0 = new Composite();
         Component c1 = new Composite();
+        // 定义叶子节点
         Component leaf1 = new Leaf("1");
         Component leaf2 = new Leaf("2");
         Component leaf3 = new Leaf("3");
-        // 树枝添加树叶节点作为子节点
+        // 往树枝添加树叶节点作为子节点
         c0.add(leaf1);
         c1.add(leaf2);
         c1.add(leaf3);
